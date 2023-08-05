@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Most Popular YouTube Video Titles</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #2c3e50;
+        }
+
+        .center-container {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+
+        button {
+            margin: 10px;
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #3498db;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        ul li {
+            margin-bottom: 5px;
+            padding: 5px;
+            background-color: #f2f2f2;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Most Popular YouTube Video Titles</h1>
+    <div class="center-container">
+        <button id="displayBtn" onclick="displayVideos()">Display popular videos on YouTube now</button>
+    </div>
+    <ul id="videoList" style="display: none;">
+        {% for title in video_titles %}
+            <li>{{ title }}</li>
+        {% endfor %}
+    </ul>
+
+    <script>
+        function displayVideos() {
+            const videoList = document.getElementById('videoList');
+            const displayBtn = document.getElementById('displayBtn');
+
+            if (videoList.style.display === 'none') {
+                videoList.style.display = 'block';
+                displayBtn.textContent = 'Hide popular videos';
+            } else {
+                videoList.style.display = 'none';
+                displayBtn.textContent = 'Display popular videos on YouTube now';
+            }
+        }
+    </script>
+</body>
+</html>
