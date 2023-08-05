@@ -34,7 +34,6 @@ def save_video_titles_to_database(video_titles, data_base_name):
         index=False
     )
 
-
 def retrieve_from_database(data_base_name):
     engine = db.create_engine('sqlite:///data_base_name.db')
     with engine.connect() as connection:
@@ -50,3 +49,8 @@ def retrieve_from_database(data_base_name):
 
 # retrieve_titles = retrieve_from_database('data_base_name.db')
 # print(retrieve_titles)
+
+
+
+
+
