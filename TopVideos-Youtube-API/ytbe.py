@@ -42,11 +42,11 @@ def retrieve_from_database(data_base_name):
         query_result = connection.execute(db.text(query)).fetchall()
         return pd.DataFrame(query_result)
 
+#Uncoment and run this file if want to interact in the terminal instead of the web
+# data = makee_youtube_api_requests()
+# video_titles = extract_video_titles(data)
+# save_video_titles_to_database(video_titles, 'data_base_name.db')
 
-data = makee_youtube_api_requests()
-video_titles = extract_video_titles(data)
-save_video_titles_to_database(video_titles, 'data_base_name.db')
 
-
-retrieve_titles = retrieve_from_database('data_base_name.db')
-print(retrieve_titles)
+# retrieve_titles = retrieve_from_database('data_base_name.db')
+# print(retrieve_titles)
