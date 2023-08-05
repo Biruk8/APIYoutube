@@ -1,6 +1,5 @@
-Sure! Here's a README template you can use for your project:
 
-# YouTube Video Titles Viewer
+# YouTube Popular Video Titles Viewer
 
 This is a simple web application that retrieves and displays the most popular YouTube video titles using the YouTube Data API. The project is implemented with Python and Flask framework, allowing users to view a list of the top videos' titles.
 
