@@ -1,69 +1,56 @@
+Sure! Here's a README template you can use for your project:
 
-# YouTube Most Popular Video Titles Scraper
+# YouTube Video Titles Viewer
 
-This is a Python script that makes API requests to the YouTube API, retrieves the most popular video titles, and saves them to a SQLite database. This application is a simple example of how to interact with web APIs and databases using Python.
+This is a simple web application that retrieves and displays the most popular YouTube video titles using the YouTube Data API. The project is implemented with Python and Flask framework, allowing users to view a list of the top videos' titles.
 
-## Prerequisites
+![Screen Shot 2023-08-04 at 9 51 13 PM](https://github.com/Biruk8/APIYoutube/assets/140538603/538dd95c-9a83-44e5-a67d-46f9fe7d049d)
 
-Before running the application, make sure you have the following installed:
+## Features
 
-- Python (version 3.x)
-- pip (Python package manager)
+- Fetches data from the YouTube Data API to get the most popular video titles.
+- Stores the video titles in a local SQLite database for quick retrieval.
+- Provides a button to toggle the display of the video titles, offering a user-friendly interface.
 
 ## Installation
 
 1. Clone the repository to your local machine.
-2. Navigate to the project directory using the terminal or command prompt.
-3. Install the required dependencies by running:
+2. Install the required libraries using `pip`:
 
-```bash
-pip install requests pandas sqlalchemy
-```
+   ```bash
+   pip install Flask pandas sqlalchemy requests
+   ```
 
-## Configuration
+3. Set up your YouTube API key:
+   - Go to the [Google Developers Console](https://console.developers.google.com/).
+   - Create a new project and enable the YouTube Data API v3.
+   - Create an API key for the project.
+   - Set the API key as an environment variable on your machine:
 
-To use the YouTube API, you will need an API key. Follow these steps to obtain an API key:
+     **On Linux/MacOS**:
 
-1. Go to the Google Developers Console: https://console.developers.google.com/
-2. Create a new project or select an existing one.
-3. In the sidebar, navigate to "APIs & Services" > "Library".
-4. Search for "YouTube Data API v3" and enable it for your project.
-5. In the sidebar, navigate to "APIs & Services" > "Credentials".
-6. Click on "Create credentials" and select "API key".
-7. Copy the API key and set it as an environment variable with the name "YOUTUBE_API_KEY".
+     ```bash
+     export YOUTUBE_API_KEY=your_youtube_api_key_here
+     ```
+
+     **On Windows**:
+
+     ```bash
+     set YOUTUBE_API_KEY=your_youtube_api_key_here
+     ```
 
 ## Usage
 
-1. Open the terminal or command prompt.
-2. Navigate to the project directory.
-3. Run the Python script by executing:
+1. Ensure you have set up your YouTube API key as described in the Installation section.
+2. Open a terminal and navigate to the project directory.
+3. Run the Flask application using:
 
-```bash
-python youtube_scraper.py
-```
+   ```bash
+   python app.py
+   ```
 
-The script will make API requests to the YouTube API, retrieve the most popular video titles, and save them to a SQLite database named "data_base_name.db".
+4. Access the application in your web browser by going to [http://127.0.0.1:5000/](http://127.0.0.1:5000/).
+5. Click the "Display popular videos on YouTube now" button to see the most popular video titles.
+ouTube API is subject to its usage policies, so make sure to review and comply with YouTube's API terms of service.
 
-## Retrieving Video Titles from the Database
-
-If you want to retrieve the video titles from the database, you can use the following command:
-
-```bash
-python youtube_scraper.py retrieve
-```
-
-The script will connect to the database and display the retrieved video titles in the terminal.
-
-## Note
-
-- This application is intended for learning purposes and may require additional error handling and optimizations for production use.
-- Make sure to keep your API key secure and do not share it publicly.
-- For large-scale applications, consider using appropriate rate limiting and caching strategies to avoid API rate limits and improve performance.
-
-## Contributors
-
-This project was developed by Biruk8.
-
-Feel free to contribute or provide feedback to improve this YouTube Most Popular Video Titles Scraper.
-
-**Enjoy coding!**
+---
